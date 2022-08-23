@@ -1,0 +1,20 @@
+<% flash.each do |name, message|%>
+  <% if (name == "error") %>
+  <div class="ui negative message">
+    <i class="close icon"></i>
+    <div class="header">
+      ERROR
+    </div>
+    <p><%= message%></p>
+  </div>
+
+  <% else %>
+  <div class="ui orange message">
+    <i class="close icon"></i>
+    <div class="header">
+      NOTICE
+    </div>
+    <p><%= message%></p>
+  </div>
+  <% end %>
+<% end %>
